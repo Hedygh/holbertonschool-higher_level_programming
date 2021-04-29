@@ -15,7 +15,8 @@ if argv[2] not in operators:
     exit(1)
 i = 0
 while i < 4:
+    if argv[2] == operators[i]:
         print("{:d} {:s} {:d} = {:d}".format
               (a, operators[i], b, functions[i](a, b)))
         break
-        i = i + 1
+    i = i + 1
