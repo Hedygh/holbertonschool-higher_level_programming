@@ -5,22 +5,20 @@
 
 
 class Square:
-    """ Define Square class."""
+    """ Define Square class.
+
+
+    Attributes:
+        size: size
+        position: position
+    """
 
     def __init__(self, size=0, position=(0, 0)):
-        """ Initialize the square.
-
-
-        Args:
-            size (int): Size of the square.
-            position (tuple): Position of the square.
-        """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """ Return the size of square. """
         return self.__size
 
     @size.setter
@@ -33,7 +31,6 @@ class Square:
 
     @property
     def position(self):
-        """ Return position of the square. """
         return self.__position
 
     @position.setter
@@ -46,17 +43,9 @@ class Square:
         self.__position = value
 
     def area(self):
-        """ Calculate area of the square.
-
-
-        Returns:
-            Area value.
-        """
         return (self.__size * self.__size)
 
     def my_print(self):
-        """ Print the current square fill with '#'
-        """
         if self.__size == 0:
             print()
             return
