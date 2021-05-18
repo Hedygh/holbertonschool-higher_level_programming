@@ -40,6 +40,9 @@ class Square:
     def my_print(self):
         """ Print the current square fill with '#'
         """
+        if self.__value == 0:
+            print()
+            return
         for i in range(self.__value):
             for j in range(self.__value):
                 print("#", end='')
