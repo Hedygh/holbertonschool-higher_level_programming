@@ -60,7 +60,7 @@ class Square:
 
     def __str__(self):
         if self.__size <= 0:
-            return
+            return('')
         for i in range(self.__position[1]):
             print()
         for i in range(self.__size):
