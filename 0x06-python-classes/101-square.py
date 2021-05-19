@@ -45,7 +45,7 @@ class Square:
         return (self.__size * self.__size)
 
     def my_print(self):
-        if self.__size == 0:
+        if self.__size <= 0:
             print()
             return
 
@@ -68,6 +68,6 @@ class Square:
                 print(" ", end='')
             for n in range(self.__size):
                 print("#", end='')
-            if i < self.__size - 1:
+            if i != self.__size - 1:
                 print()
         return('')
