@@ -1,0 +1,38 @@
+# 0-add_integer.txt
+
+Import
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Documentation check
+>>> len(__import__("0-add_integer").__doc__) > 5
+True
+
+Adding two integer
+>>> add_integer(2, 4)
+6
+
+Adding with one argument
+>>> add_integer(98)
+196
+
+Adding with float
+>>> add_integer(5.3, 9)
+14
+
+Adding negative numbers
+>>> add_integer(-1, 3)
+2
+
+Adding with wrong type
+>>> add_integer(50, "yo")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Adding with wrong type
+>>> add_integer("salut", -2)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Adding two floats
+>>> add_integer(2.1, 2.2)
+4
