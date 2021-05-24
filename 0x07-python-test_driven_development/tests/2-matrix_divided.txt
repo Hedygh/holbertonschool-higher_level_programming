@@ -35,3 +35,8 @@ Dividing with wrong element type div
 >>> matrix_divided([[2, 4, 6], [8, 9, 10]], "hello")
 Traceback (most recent call last):
 TypeError: div must be a number
+
+Missing two arguments
+>>> matrix_divided([], 2)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
