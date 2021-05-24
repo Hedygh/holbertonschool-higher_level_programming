@@ -4,7 +4,7 @@ Import
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Documentation check
->>> len(__import__("0-add_integer").__doc__) > 3
+>>> len(__import__("2-matrix_divided").__doc__) > 0
 True
 
 Dividing two matrix by 2
@@ -28,6 +28,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing with wrong element type in matrix
 >>> matrix_divided([[2, "yo"], [1, 4]], 1)
+Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing with wrong element type div
