@@ -11,6 +11,10 @@ Dividing two matrix by 2
 >>> matrix_divided([[4, 4, 6], [2, 5, 3]], 2)
 [[2.0, 2.0, 3.0], [1.0, 2.5, 1.5]]
 
+Dividing by float
+>>> matrix_divided([[2, 2, 2], [4, 4, 6]], 2.5)
+[[0.8, 0.8, 0.8], [1.6, 1.6, 2.4]]
+
 Dividing different size matrix
 >>> matrix_divided([[2, 4, 2], [2, 3, 4, 5, 6]], 2)
 Traceback (most recent call last):
@@ -50,3 +54,8 @@ Missing arguments
 >>> matrix_divided()
 Traceback (most recent call last):
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Too may arguments
+>>> matrix_divided([[1, 2], [2, 2]], 3, 5, 6)
+Traceback (most recent call last):
+TypeError: matrix_divided() takes 2 positional arguments but 4 were given
