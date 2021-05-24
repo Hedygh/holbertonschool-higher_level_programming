@@ -59,3 +59,7 @@ Too may arguments
 >>> matrix_divided([[1, 2], [2, 2]], 3, 5, 6)
 Traceback (most recent call last):
 TypeError: matrix_divided() takes 2 positional arguments but 4 were given
+
+Div is float("inf")
+>>> matrix_divided([[2, 3, 4], [1, 2, 2]], float("inf"))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
