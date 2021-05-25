@@ -80,4 +80,4 @@ class Rectangle:
     def square(cls, size=0):
         cls.__width = size
         cls.__height = size
-        return Rectangle(cls.__width, cls.__height)
+        return Rectangle(size, size)
