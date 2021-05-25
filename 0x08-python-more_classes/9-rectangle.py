@@ -12,6 +12,8 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        """ init method
+        """
         self.height = height
         self.width = width
         Rectangle.number_of_instances += 1
@@ -41,14 +43,20 @@ class Rectangle:
         self.__width = value
 
     def area(self):
+        """ area method
+        """
         return (self.__height * self.__width)
 
     def perimeter(self):
+        """ perimeter method
+        """
         if self.__width == 0 or self.__height == 0:
             return 0
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
+        """ str method
+        """
         if self.__width == 0 or self.__height == 0:
             return ""
         new_str = ""
@@ -60,14 +68,20 @@ class Rectangle:
         return new_str
 
     def __repr__(self):
+        """ repr method
+        """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
+        """ del method
+        """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """ compare two rectangle areas
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
