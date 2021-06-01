@@ -30,6 +30,15 @@ Sorted print, adding element using append
 >>> my_list.append(4)
 >>> my_list.print_sorted()
 [1, 2, 4]
+>>> my_list[0] = 1
+>>> print(my_list)
+[1, 1, 4]
+>>> my_list[2] = 25
+>>> print(my_list)
+[1, 1, 25]
+>>> my_list.remove(25)
+>>> print(my_list)
+[1, 1]
 
 Argument to print sorted method TypeError
 >>> my_list = MyList()
