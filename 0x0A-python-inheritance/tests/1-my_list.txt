@@ -1,29 +1,40 @@
 # 1-my_list.txt
 
-Import
+Import:
+
 >>> MyList = __import__('1-my_list').MyList
 
-List argument
+
+List argument:
+
 >>> my_list = MyList([1, 2, 3, 4, 5])
 >>> print(my_list)
 [1, 2, 3, 4, 5]
 
-No argument
+
+No argument:
+
 >>> my_list = MyList()
 >>> print(my_list)
 []
 
-Too many arguments
+
+Too many arguments:
+
 >>> my_list = MyList([1, 2], [2, 3], [4, 5])
 Traceback (most recent call last):
 TypeError: list expected at most 1 argument, got 3
 
-Non iterable argument
+
+Non iterable argument:
+
 >>> my_list = MyList(0)
 Traceback (most recent call last):
 TypeError: 'int' object is not iterable
 
-Sorted print, adding element using append
+
+Sorted print, adding element using append:
+
 >>> my_list = MyList()
 >>> my_list.append(2)
 >>> my_list.append(1)
@@ -40,13 +51,17 @@ Sorted print, adding element using append
 >>> print(my_list)
 [1, 1]
 
-Argument to print sorted method TypeError
+
+Argument to print sorted method TypeError:
+
 >>> my_list = MyList()
 >>> print(my_list([1, 2, 3]))
 Traceback (most recent call last):
 TypeError: 'MyList' object is not callable
 
-Sort list of strings
+
+Sort list of strings:
+
 >>> my_list = MyList()
 >>> my_list.append("Zultra")
 >>> my_list.append("Aube")
@@ -56,12 +71,16 @@ Sort list of strings
 >>> my_list.print_sorted()
 ['Aube', 'Dawn', 'Zultra']
 
-List of various types
+
+List of various types:
+
 >>> my_list = MyList(["hello", 2, 3])
 >>> print(my_list)
 ['hello', 2, 3]
 
-various types sorted error
+
+Various types sorted error:
+
 >>> my_list = MyList(["hello", 2, 3])
 >>> my_list.print_sorted()
 Traceback (most recent call last):
