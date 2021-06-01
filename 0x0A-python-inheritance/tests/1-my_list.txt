@@ -11,6 +11,11 @@ List argument:
 >>> print(my_list)
 [1, 2, 3, 4, 5]
 
+Negatives arguments:
+>>> my_list = MyList([-5, -2, -12])
+>>> my_list.print_sorted()
+[-12, -5, -2]
+
 
 No argument:
 
