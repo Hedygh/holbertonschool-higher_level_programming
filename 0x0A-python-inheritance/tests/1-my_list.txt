@@ -1,1 +1,59 @@
+# 1-my_list.txt
 
+Import
+>>> MyList = __import__('1-my_list').MyList
+
+List argument
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> print(my_list)
+[1, 2, 3, 4, 5]
+
+No argument
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+
+Too many arguments
+>>> my_list = MyList([1, 2], [2, 3], [4, 5])
+Traceback (most recent call last):
+TypeError: list expected at most 1 argument, got 3
+
+Non iterable argument
+>>> my_list = MyList(0)
+Traceback (most recent call last):
+TypeError: 'int' object is not iterable
+
+Sorted print, adding element using append
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.print_sorted()
+[1, 2, 4]
+
+Argument to print sorted method TypeError
+>>> my_list = MyList()
+>>> print(my_list([1, 2, 3]))
+Traceback (most recent call last):
+TypeError: 'MyList' object is not callable
+
+Sort list of strings
+>>> my_list = MyList()
+>>> my_list.append("Zultra")
+>>> my_list.append("Aube")
+>>> my_list.append("Dawn")
+>>> print(my_list)
+['Zultra', 'Aube', 'Dawn']
+>>> my_list.print_sorted()
+['Aube', 'Dawn', 'Zultra']
+
+List of various types
+>>> my_list = MyList(["hello", 2, 3])
+>>> print(my_list)
+['hello', 2, 3]
+
+various types sorted error
+>>> my_list = MyList(["hello", 2, 3])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'int' and 'str'
