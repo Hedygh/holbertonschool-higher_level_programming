@@ -3,5 +3,6 @@
 
 
 class MyList(list):
+    """ Method sorted print """
     def print_sorted(self):
         print(sorted(self))
