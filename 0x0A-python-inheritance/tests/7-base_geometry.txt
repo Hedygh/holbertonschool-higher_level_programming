@@ -1,0 +1,24 @@
+# 7-base_geometry.txt
+
+Import: 
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Area not implemented:
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+Value not integer:
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("hello", "salut")
+Traceback (most recent call last):
+TypeError: hello must be an integer
+
+Value under 0:
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("hello", -17)
+Traceback (most recent call last):
+ValueError: hello must be greater than 0
