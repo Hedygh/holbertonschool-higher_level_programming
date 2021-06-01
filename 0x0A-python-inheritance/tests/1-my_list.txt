@@ -4,6 +4,10 @@ Import:
 
 >>> MyList = __import__('1-my_list').MyList
 
+Doc check:
+
+>>> len (__import__("1-my_list").__doc__) > 5
+True
 
 List argument:
 
