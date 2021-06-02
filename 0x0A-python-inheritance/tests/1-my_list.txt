@@ -27,14 +27,6 @@ No argument:
 >>> print(my_list)
 []
 
-
-Too many arguments:
-
->>> my_list = MyList([1, 2], [2, 3], [4, 5])
-Traceback (most recent call last):
-TypeError: list expected at most 1 argument, got 3
-
-
 Non iterable argument:
 
 >>> my_list = MyList(0)
