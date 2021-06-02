@@ -78,11 +78,3 @@ List of various types:
 >>> my_list = MyList(["hello", 2, 3])
 >>> print(my_list)
 ['hello', 2, 3]
-
-
-Various types sorted error:
-
->>> my_list = MyList(["hello", 2, 3])
->>> my_list.print_sorted()
-Traceback (most recent call last):
-TypeError: '<' not supported between instances of 'int' and 'str'
