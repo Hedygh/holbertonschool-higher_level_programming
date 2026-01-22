@@ -1,6 +1,10 @@
 # 0-add_integer.txt
 >>> add_integer = __import__('0-add_integer').add_integer
 
+# Documentation check
+>>> len(__import__("0-add_integer").__doc__) > 5
+True
+
 # Basic cases
 >>> add_integer(1, 2)
 3
