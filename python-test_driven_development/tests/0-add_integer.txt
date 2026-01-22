@@ -1,33 +1,48 @@
 # 0-add_integer.txt
-
-Import
 >>> add_integer = __import__('0-add_integer').add_integer
 
-Basic cases
+# Basic cases
 >>> add_integer(1, 2)
 3
-
->>> add_integer(1)
-99
-
->>> add_integer(98, 0)
+>>> add_integer(2)
+100
+>>> add_integer(100, -2)
 98
+>>> add_integer(0, 0)
+0
+>>> add_integer(-5, -7)
+-12
 
->>> add_integer(-10, 12)
-2
-
-Adding with float
+# Float casting (truncate)
+>>> add_integer(100.3, -2)
+98
 >>> add_integer(3.9, 9)
 12
-
->>> add_integer(-3.4, 2)
--1
-
 >>> add_integer(2.5, 3.9)
 5
+>>> add_integer(-3.4, 2)
+-1
+>>> add_integer(3, -2.9)
+1
+>>> add_integer(3.2)
+101
 
-Type errors
+# Type errors (a)
 >>> add_integer("hello", 5)
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# Type errors (b)
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(4, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
