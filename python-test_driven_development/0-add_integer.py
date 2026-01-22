@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""Function that add two integers."""
+"""Function that add two integers.
+
+
+
+"""
 
 
 def add_integer(a, b=98):
     """
-    Docstring for add_integer
-
-    :param a: int to add
-    :param b: int to add
+    :param a: int to add :param b: int to add
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
