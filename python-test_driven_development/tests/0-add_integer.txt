@@ -1,0 +1,33 @@
+# 0-add_integer.txt
+
+Import
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Basic cases
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(1)
+99
+
+>>> add_integer(98, 0)
+98
+
+>>> add_integer(-10, 12)
+2
+
+Adding with float
+>>> add_integer(3.9, 9)
+12
+
+>>> add_integer(-3.4, 2)
+-1
+
+>>> add_integer(2.5, 3.9)
+5
+
+Type errors
+>>> add_integer("hello", 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
