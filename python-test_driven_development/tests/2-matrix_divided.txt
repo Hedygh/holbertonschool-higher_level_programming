@@ -1,0 +1,44 @@
+# 2-matrix_divided.txt
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Documentation check
+>>> len(__import__('2-matrix_divided').__doc__) > 5
+True
+>>> len(__import__('2-matrix_divided').matrix_divided.__doc__) > 5
+True
+
+Basic
+>>> matrix_divided([[1, 2], [3, 4]], 2)
+[[0.5, 1.0], [1.5, 2.0]]
+
+Rounding to 2 decimals
+>>> matrix_divided([[1, 2], [3, 4]], 3)
+[[0.33, 0.67], [1.0, 1.33]]
+
+div errors
+>>> matrix_divided([[1, 2]], "2")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> matrix_divided([[1, 2]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+matrix type errors
+>>> matrix_divided("not a matrix", 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided([[1, "2"], [3, 4]], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+row size error
+>>> matrix_divided([[1, 2, 3], [4, 5]], 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
