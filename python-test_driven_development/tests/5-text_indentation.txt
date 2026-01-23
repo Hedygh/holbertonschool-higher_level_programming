@@ -33,6 +33,8 @@ How are you?
 Fine:
 <BLANKLINE>
 thanks.
+<BLANKLINE>
+
 
 No separators (should print as-is, trimmed per line rules)
 >>> text_indentation("  Hello world  ")

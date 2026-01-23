@@ -7,22 +7,35 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    buf = ""  # current line buffer (without final trimming yet)
+    buf = ""
+    just_split = False
+
     for ch in text:
         if ch == "\n":
-            if buf:
+            # If we already printed "\n\n" because of a separator, skip this newline
+            if just_split:
+                just_split = False
+                continue
+
+            # flush current line (trim end) then print exactly one newline
+            if buf != "":
                 print(buf.rstrip(), end="")
                 buf = ""
-            print("\n", end="")
+            print("", end="\n")  # exactly one newline
             continue
 
         if ch == " " and buf == "":
             continue
+
         if ch in ".?:":
-            print(buf.rstrip() + ch, end="")
-            print("\n")
+            print(buf.rstrip() + ch, end="\n\n")
             buf = ""
+            just_split = True
             continue
+
         buf += ch
-    if buf:
+        just_split = False
+
+    # final flush: print WITHOUT adding newline
+    if buf != "":
         print(buf.rstrip(), end="")
