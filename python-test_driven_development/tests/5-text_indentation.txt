@@ -1,3 +1,9 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Documentation check
@@ -6,24 +12,53 @@ True
 >>> len(__import__('5-text_indentation').text_indentation.__doc__) > 5
 True
 
-Basic
->>> text_indentation("Hello. World")
-Hello.
-
-World
-
-Multiple separators and spaces
->>> text_indentation("Hi.  How are you?   Fine: thanks.")
-Hi.
-
-How are you?
-
-Fine:
-
-thanks.
-
 Type error
 >>> text_indentation(123)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
+
+Basic (single separator)
+>>> text_indentation("Hello. World")
+Hello.
+<BLANKLINE>
+World
+
+Multiple separators and spaces
+>>> text_indentation("Hi.  How are you?   Fine: thanks.")
+Hi.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+Fine:
+<BLANKLINE>
+thanks.
+
+No separators (should print as-is, trimmed per line rules)
+>>> text_indentation("  Hello world  ")
+Hello world
+
+Leading spaces after separator should not appear at beginning of new line
+>>> text_indentation("Hello.   World")
+Hello.
+<BLANKLINE>
+World
+
+Only separators
+>>> text_indentation(".?:")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+Newlines in input should be preserved as printed characters (but no extra spaces)
+>>> text_indentation("Line1.\n   Line2?  Line3:   End")
+Line1.
+<BLANKLINE>
+Line2?
+<BLANKLINE>
+Line3:
+<BLANKLINE>
+End
