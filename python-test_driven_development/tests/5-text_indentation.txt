@@ -1,0 +1,29 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Documentation check
+>>> len(__import__('5-text_indentation').__doc__) > 5
+True
+>>> len(__import__('5-text_indentation').text_indentation.__doc__) > 5
+True
+
+Basic
+>>> text_indentation("Hello. World")
+Hello.
+
+World
+
+Multiple separators and spaces
+>>> text_indentation("Hi.  How are you?   Fine: thanks.")
+Hi.
+
+How are you?
+
+Fine:
+
+thanks.
+
+Type error
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
