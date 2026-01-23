@@ -3,24 +3,16 @@
 
 
 def text_indentation(text):
-    """Print text with 2 new lines after '.', '?' and ':'.
-
-    No spaces are printed at the beginning or at the end of each line.
-    """
+    """Print text with 2 new lines after '.', '?' and ':'."""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    i = 0
-    while i < len(text):
-        ch = text[i]
-        if ch in ".?:":
-            print(ch, end="")
-            print("\n")
-            i += 1
-            while i < len(text) and text[i] == " ":
-                i += 1
+
+    new_line = True  # True = we are at the start of a line
+    for ch in text:
+        if ch == " " and new_line:
             continue
-        if ch != " ":
-            print(ch, end="")
-        else:
-            print(ch, end="")
-        i += 1
+        print(ch, end="")
+        new_line = False
+        if ch in ".?:":
+            print("\n")
+            new_line = True
