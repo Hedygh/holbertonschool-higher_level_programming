@@ -22,6 +22,5 @@ def text_indentation(text):
         if ch != " ":
             print(ch, end="")
         else:
-            # print spaces only if not at line start (handled by skipping after punctuation)
             print(ch, end="")
         i += 1
