@@ -12,7 +12,6 @@ def text_indentation(text):
 
     for ch in text:
         if ch == "\n":
-            # If we already printed "\n\n" because of a separator, skip this newline
             if just_split:
                 just_split = False
                 continue
