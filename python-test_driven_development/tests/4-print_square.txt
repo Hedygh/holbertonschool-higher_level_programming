@@ -1,0 +1,31 @@
+>>> print_square = __import__('4-print_square').print_square
+
+Documentation check
+>>> len(__import__('4-print_square').__doc__) > 5
+True
+>>> len(__import__('4-print_square').print_square.__doc__) > 5
+True
+
+Size 0 prints nothing
+>>> print_square(0)
+
+Basic square
+>>> print_square(2)
+##
+##
+
+Errors
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+>>> print_square("2")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(-2.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
