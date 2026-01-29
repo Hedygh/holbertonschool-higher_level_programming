@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """ Defines a square """
+    """ Defines a rectangle """
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -41,3 +41,18 @@ class Rectangle:
             return (0)
         else:
             return (2 * (self.__width + self.__height))
+
+    def my_print(self):
+        if self.__width == 0 or self.__height == 0:
+            print()
+            return
+        for _ in range(self.__height):
+            print("#" * self.__width)
+
+    def __str__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+        lines = []
+        for _ in range(self.__height):
+            lines.append("#" * self.__width)
+            return "\n".join(lines)
