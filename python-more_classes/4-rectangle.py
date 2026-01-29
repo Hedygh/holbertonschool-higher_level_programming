@@ -58,4 +58,4 @@ class Rectangle:
         return "\n".join(lines)
 
     def __repr__(self):
-        return "{}, {}".format(self.__width, self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
