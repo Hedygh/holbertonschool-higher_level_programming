@@ -25,11 +25,11 @@ class Circle(Shape):
 
     def area(self):
         """ area method """
-        return math.pi * (self.radius ** 2)
+        return math.pi * self.radius ** 2
 
     def perimeter(self):
         """ perimeter method """
-        return (2 * math.pi * self.radius)
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
@@ -40,11 +40,11 @@ class Rectangle(Shape):
 
     def area(self):
         """ area method """
-        return (self.width * self.height)
+        return self.width * self.height
 
     def perimeter(self):
         """ perimeter method """
-        return (2 * (self.width + self.height))
+        return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
