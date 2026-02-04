@@ -5,9 +5,6 @@ import math
 from abc import ABC, abstractmethod
 
 
-__all__ = ["Shape", "Circle", "Rectangle", "shape_info"]
-
-
 class Shape(ABC):
     """ Abstract class Shape """
     @abstractmethod
