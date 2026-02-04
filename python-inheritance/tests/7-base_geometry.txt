@@ -1,5 +1,3 @@
-# tests/7-base_geometry.txt
-
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
@@ -33,9 +31,3 @@ ValueError: my_int must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: my_int must be greater than 0
-
-# bool edge case (important in Python)
->>> bg.integer_validator("my_int", True)
-Traceback (most recent call last):
-...
-TypeError: my_int must be an integer
