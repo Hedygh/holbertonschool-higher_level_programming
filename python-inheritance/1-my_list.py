@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" class Mylist """
+""" Class Mylist """
 
 
 class MyList(list):
     """ class mylist inherite from list """
+
     def print_sorted(self):
         """ print sorted list """
         print(sorted(self))
