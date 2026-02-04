@@ -1,26 +1,80 @@
-# tests/1-my_list.txt
+# 1-my_list.txt
+
+Import:
 
 >>> MyList = __import__('1-my_list').MyList
 
-# Basic case
->>> ml = MyList([3, 1, 2])
->>> ml.print_sorted()
-[1, 2, 3]
->>> ml
-[3, 1, 2]
+Doc check:
 
-# Empty list
->>> ml2 = MyList([])
->>> ml2.print_sorted()
+>>> len (__import__("1-my_list").__doc__) > 5
+True
+
+List argument:
+
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> print(my_list)
+[1, 2, 3, 4, 5]
+
+Negatives arguments:
+>>> my_list = MyList([-5, -2, -12])
+>>> my_list.print_sorted()
+[-12, -5, -2]
+
+
+No argument:
+
+>>> my_list = MyList()
+>>> print(my_list)
 []
 
-# Duplicates and negatives
->>> ml3 = MyList([10, -1, 10, 2])
->>> ml3.print_sorted()
-[-1, 2, 10, 10]
->>> ml3
-[10, -1, 10, 2]
+Non iterable argument:
 
-# Inheritance check
->>> isinstance(ml, list)
-True
+>>> my_list = MyList(0)
+Traceback (most recent call last):
+TypeError: 'int' object is not iterable
+
+
+Sorted print, adding element using append:
+
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.print_sorted()
+[1, 2, 4]
+>>> my_list[0] = 1
+>>> print(my_list)
+[1, 1, 4]
+>>> my_list[2] = 25
+>>> print(my_list)
+[1, 1, 25]
+>>> my_list.remove(25)
+>>> print(my_list)
+[1, 1]
+
+
+Argument to print sorted method TypeError:
+
+>>> my_list = MyList()
+>>> print(my_list([1, 2, 3]))
+Traceback (most recent call last):
+TypeError: 'MyList' object is not callable
+
+
+Sort list of strings:
+
+>>> my_list = MyList()
+>>> my_list.append("Zultra")
+>>> my_list.append("Aube")
+>>> my_list.append("Dawn")
+>>> print(my_list)
+['Zultra', 'Aube', 'Dawn']
+>>> my_list.print_sorted()
+['Aube', 'Dawn', 'Zultra']
+
+
+List of various types:
+
+>>> my_list = MyList(["hello", 2, 3])
+>>> print(my_list)
+['hello', 2, 3]
