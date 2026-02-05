@@ -30,7 +30,10 @@ class Circle(Shape):
 
     def perimeter(self):
         """ perimeter method """
-        return 2 * pi * self.radius
+        res = 2 * pi * self.radius
+        if res < 0:
+            res = -res
+        return res
 
 
 class Rectangle(Shape):
@@ -45,7 +48,10 @@ class Rectangle(Shape):
 
     def perimeter(self):
         """ perimeter method """
-        return 2 * (self.width + self.height)
+        res = 2 * (self.width + self.height)
+        if res < 0:
+            res = -res
+        return res
 
 
 def shape_info(shape):
