@@ -259,7 +259,7 @@ Réponses possibles :
 
 ---
 
-# 8️⃣ Synthèse — Ce que je dois maîtriser
+# 8️⃣ Synthèse 
 
 - Comprendre HTTP / HTTPS
 - Savoir associer Méthodes HTTP ↔ CRUD

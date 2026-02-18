@@ -172,7 +172,7 @@ Permet d’avoir un JSON lisible.
 
 ---
 
-# 🎯 Ce que je dois savoir expliquer
+# 🎯 Important
 
 - GET est la méthode par défaut
 - `-X` permet de changer la méthode
@@ -183,9 +183,9 @@ Permet d’avoir un JSON lisible.
 
 ---
 
-# 🔥 Lien avec mon projet HBnB
+# 🔥 Lien avec HBnB
 
-Quand mon API Flask tournera en local :
+Quand API Flask tournera en local :
 
 ```bash
 curl http://localhost:5000/users
@@ -194,7 +194,7 @@ curl -X POST http://localhost:5000/users \
 -d '{"email":"test@mail.com"}'
 ```
 
-curl me permet de tester mon API sans Postman.
+curl permet de tester mon API sans Postman.
 
 ---
 
