@@ -45,8 +45,3 @@ class APIhandler(BaseHTTPRequestHandler):
             self.send_header("Content-Type", "text/plain; charset=utf-8")
             self.end_headers()
             self.wfile.write(body)
-
-
-if __name__ == "__main__":
-    httpd = HTTPServer(("", 8000), APIhandler)
-    httpd.serve_forever()
