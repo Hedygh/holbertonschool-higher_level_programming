@@ -7,11 +7,11 @@ import json
 
 
 class APIhandler(BaseHTTPRequestHandler):
-    """ mini API that send responses"""
+    """ mini API that send res_ponses"""
     def do_GET(self):
         """ methods that defines responses for given path """
         if self.path == "/":
-            body = "Hello; this is a simple API!".encode("utf-8")
+            body = "Hello, this is a simple API!".encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "text/plain; charset=utf-8")
             self.end_headers()
