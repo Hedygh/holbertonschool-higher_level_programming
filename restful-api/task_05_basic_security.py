@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Basic and JWT authentication with Flask."""
 
+
 from flask import Flask, jsonify, request
 from flask_httpauth import HTTPBasicAuth
 from flask_jwt_extended import (
@@ -23,12 +24,12 @@ jwt = JWTManager(app)
 users = {
     "user1": {
         "username": "user1",
-        "password": generate_password_hash("password"),
+        "password": generate_password_hash("password", method="pbkdf2:sha256"),
         "role": "user",
     },
     "admin1": {
         "username": "admin1",
-        "password": generate_password_hash("password"),
+        "password": generate_password_hash("password", method="pbkdf2:sha256"),
         "role": "admin",
     },
 }
@@ -113,3 +114,7 @@ def admin_only():
     if claims.get("role") != "admin":
         return jsonify({"error": "Admin access required"}), 403
     return "Admin Access: Granted"
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
