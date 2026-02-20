@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" Simple API with flask """
 
 from flask import Flask, jsonify, request
 
