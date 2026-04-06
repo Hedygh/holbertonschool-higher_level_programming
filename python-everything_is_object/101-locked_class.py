@@ -3,4 +3,5 @@
 
 
 class LockedClass:
+    """ Using slots to lock attributes creation """
     __slots__ = ['first_name']
